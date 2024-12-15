@@ -1,0 +1,129 @@
+/* Reset Default Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* General Body Styling */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 110vh;
+    flex-direction: column;
+}
+
+/* Image Styling */
+.book-image {
+    width: 380px;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+}
+
+/* Navigation Bar Styles */
+nav {
+    background-color: #fff;
+    padding: 10px 0;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+}
+
+nav ul {
+    list-style-type: none;
+    display: flex;
+    justify-content: center;
+    padding: 0;
+    margin: 0;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: black;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+nav ul li a:hover {
+    text-decoration: underline;
+}
+
+/* Adjust body content for fixed navbar */
+body {
+    padding-top: 60px; /* Adjust for navbar height */
+}
+
+/* Book Container and Canvas Styles */
+.book-container {
+    width: 90%;
+    max-width: 800px;
+    text-align: center;
+    margin: 30px auto;
+}
+
+.book {
+    position: relative;
+    width: 40%;
+    height: 400px;
+    margin: auto;
+    background: #ddd;
+    perspective: 1000px;
+    border: 1px solid #ccc;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    overflow: hidden;
+}
+
+/* Individual Pages */
+.page {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    backface-visibility: hidden;
+    transform-origin: left center;
+    transition: transform 1s;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+}
+
+.page img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+    border: 5px solid #f4f4f4;
+}
+
+/* Controls */
+.controls {
+    text-align: center;
+    margin-top: 20px;
+}
+
+button {
+    padding: 10px 20px;
+    margin: 5px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background 0.3s;
+}
+
+button:hover {
+    background-color: #0056b3;
+}

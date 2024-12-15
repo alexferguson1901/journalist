@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Book - Flip Pages</title>
+    <link rel="stylesheet" href="stylesnotebook.css">
+</head>
+<body>
+
+    <!-- Book Container -->
+    <div class="book-container">
+        
+        <!-- Image Header -->
+        <img src="jounalist.png" alt="Journalist" class="book-image">
+
+        <!-- Navbar -->
+        <header>
+            <nav>
+                <ul>
+                    <li><a href="signin.html">Sign In</a></li>
+                    <li><a href="edit.html">Edit</a></li>
+                    <li><a href="notebook.html">NoteBook</a></li>
+                </ul>
+            </nav>
+        </header>
+        
+        <!-- Input for image upload -->
+        <input type="file" id="imageInput" accept="image/*" multiple>
+        <button id="clearImages">Delete This Image</button>
+
+        <!-- Book area -->
+        <div id="book" class="book"></div>
+
+        <!-- Controls -->
+        <div class="controls">
+            <button id="prevBtn">Previous</button>
+            <button id="nextBtn">Next</button>
+        </div>
+    </div>
+
+    <script src="scriptnotebook.js"></script>
+</body>
+</html>

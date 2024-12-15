@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JournaList</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+
+<body>
+
+ <nav>
+        <ul>
+		<li><a href="signin.html">Sign In</a></li>
+		<li><a href="edit.html">Edit</a></li>
+        <li><a href="notebook.html">NoteBook</a></li>
+            
+        </ul>
+    </nav>
+
+
+    <div class="app-container">
+        <header>
+            <center><img src="jounalist.png" style="width: 380px; height: auto;"></center>
+
+			
+			
+            <center>
+                <div class="toolbox">
+                    <label for="colorPicker">Color:</label>
+                    <input type="color" id="colorPicker" value="#000000">
+
+                    <label for="lineWidth">Brush Size:</label>
+                    <input type="range" id="lineWidth" min="1" max="10" value="3">
+
+                    <button id="clearBtn">Clear</button>
+                    
+                    <button id="undoBtn">Undo</button>
+					<button id="redoBtn">Redo</button>
+
+                    <button id="addTextBtn">Add Text</button>
+                    <button id="chooseTemplateBtn">Choose Template</button>
+					<button id="saveBtn">Save</button>
+					
+					
+                </div>
+            </center>
+        </header>
+        <main>
+            <canvas id="drawingCanvas"></canvas>
+        </main>
+
+        <!-- Template Selection Modal -->
+        <div id="templateModal" class="modal">
+		<input type="file" id="templateInput" accept="image/*">
+
+            <div class="modal-content">
+                <span class="close">&times;</span>
+                <h3>Choose a Template</h3>
+                <div class="template-options">
+			
+				
+                    <img src="Daily1.jpg" class="template" alt="Template 1">
+                    <img src="Daily2.jpg" class="template" alt="Template 2">
+                    <img src="Daily3.png" class="template" alt="Template 3">
+					
+					<img src="Monthly1.jpg" class="template" alt="Template 4">
+                    <img src="Monthly2.jpg" class="template" alt="Template 5">
+					
+                    <img src="ToDo.jpg" class="template" alt="Template 6">
+					<img src="ToDo2.jpg" class="template" alt="Template 7">
+					
+                    <img src="Weekly1.jpg" class="template" alt="Template 8">
+                    <img src="Weekly2.jpg" class="template" alt="Template 9">
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
